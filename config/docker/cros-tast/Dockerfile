@@ -14,6 +14,7 @@ RUN apt-get update && apt-get install -y \
     git \
     inetutils-ping \
     python3 \
+    python3-paramiko \
     python-pkg-resources \
     vim \
     xz-utils
@@ -41,6 +42,7 @@ RUN cp "$HOME/trunk/chromite/ssh_keys/testing_rsa" "$HOME/.ssh/id_rsa"
 RUN chmod 0600 "$HOME/.ssh/id_rsa"
 
 ADD tast_parser.py /home/cros-tast/tast_parser.py
+ADD baseline_cros.py /home/cros-tast/baseline_cros.py
 
 # Needed by LAVA to install the overlay
 USER root
