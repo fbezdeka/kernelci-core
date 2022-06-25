@@ -41,6 +41,7 @@ RUN cp "$HOME/trunk/chromite/ssh_keys/testing_rsa" "$HOME/.ssh/id_rsa"
 RUN chmod 0600 "$HOME/.ssh/id_rsa"
 
 ADD tast_parser.py /home/cros-tast/tast_parser.py
+ADD https://github.com/kernelci/kernelci-core/blob/chromeos/config/rootfs/debos/overlays/baseline/opt/kernelci/dmesg.sh /home/cros-tast/dmesg.sh
 
 # Needed by LAVA to install the overlay
 USER root
