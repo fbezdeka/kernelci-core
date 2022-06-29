@@ -54,6 +54,7 @@ all_targets="\
 build-base \
 buildroot \
 compilers \
+cros-baseline \
 coccinelle \
 cvehound \
 debos \
