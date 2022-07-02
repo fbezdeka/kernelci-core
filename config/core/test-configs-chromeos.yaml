@@ -11,7 +11,6 @@ test_plans:
     <<: *cros-baseline
     filters: &cros-filters-fixed
       - blocklist: { defconfig: ['kselftest'] }
-      - blocklist: { defconfig: ['cros'] }
     params:
       docker_image: 'kernelci/cros-baseline'
       fixed_kernel: true
@@ -31,7 +30,6 @@ test_plans:
     base_name: cros-baseline-fixed
     filters: &cros-qemu-filters-fixed
       - blocklist: { defconfig: ['kselftest'] }
-      - blocklist: { defconfig: ['cros'] }
       - passlist: { lab: ['lab-collabora-staging', 'lab-collabora'] }
     params:
       <<: *cros-baseline-qemu-params
